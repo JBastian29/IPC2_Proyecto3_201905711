@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '../assets/dist/css/bootstrap.css' %} " rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+        body {
+            padding-bottom: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 80px;
+        }
+
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: flex;
+
+        }
+    </style>
+
+
+    <link href="navbar.css" rel="stylesheet">
+</head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ProyectoIPC2</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">3er Proyecto IPC2</a>
+
+    </div>
+</nav>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <button class="btn btn-dark" id="boton_consultar" type="submit">Consultar datos</button>
+    <button class="btn btn-dark" id="boton_gfu" type="submit">Grafica Fecha/Usuario</button>
+    <button class="btn btn-dark" id="boton_gfc" type="submit">Grafica Fecha/Codigo</button>
+    <button class="btn btn-dark" id="boton_ayuda" type="submit">Ayuda</button><br><br>
+<form action="" id="post-form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+  <span class="btn btn-success btn-file">
+    Cargar archivo <input type="file" id="Cargar_archivo" name="Cargar_archivo">
+  </span>
+
+
+
+    <main class="d-flex justify-content-around">
+        {% if todoxml %}
+        <textarea class="" rows="18" cols="60" style="background-color:rgb(240,243,245), " disabled
+                  id="contenidoXML" name="txtcontenidoXML">{{todoxml}}</textarea>
+        {% endif %}
+        <textarea rows="18" cols="60" style="background-color:rgb(240, 243, 245)" disabled id="messages"></textarea>
+
+    </main>
+    <br><br><center><button class="btn btn-warning" id="Enviar_Datos" type="submit">Enviar Datos</button>
+    <button type="button" class="btn btn-warning" id="Eliminar">Eliminar</button></center>
+</form>
+
+
+<script>
+    function cargarXML(events) {
+        let archivo = events.target.files[0];
+        if (archivo) {
+            let leer = new FileReader();
+            leer.onload = function (e) {
+                let contenido = e.target.result;
+                document.getElementById('contenidoXML').innerHTML = contenido;
+            };
+            leer.readAsText(archivo);
+        } else {
+            alert('Mi pana dele pa fuera')
+        }
+    }
+
+    window.addEventListener('load', () => {
+        document.getElementById('Cargar_archivo').addEventListener('change', cargarXML)
+    });
+
+</script>
+
+
+</body>
+
+</html>
