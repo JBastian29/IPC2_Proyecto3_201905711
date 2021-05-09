@@ -23,6 +23,7 @@ def inicio(request):
                 l = str(l[:len(linea) - 1])
             enxml=str(enxml)+str(l)+"\n"
         context['todoxml'] = enxml
+
         #------------- PARA ENVIAR EL XML DESDE FRONT A BACK-----------------
 
         archivo_xml = open(nom, "r")
