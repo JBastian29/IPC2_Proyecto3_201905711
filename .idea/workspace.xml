@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -21,9 +22,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IPC2D_EjemploProyecto3_2_1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Quinto - Cuarto Semestre/Lap IPC2/Algunas pruebas/Pruebaxml3erP" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -57,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620285718453</updated>
-      <workItem from="1620285720541" duration="43511000" />
+      <workItem from="1620285720541" duration="64353000" />
     </task>
     <servers />
   </component>
@@ -65,44 +67,44 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620537352570">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620618083055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620537352570" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1620456411963">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620618083055" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620456411963" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1620456411962">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620456411962" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1620456411962">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620456411962" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1620456411962">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620456411962" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1620456411963">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620456411963" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1620456411963">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620456411963" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1620456411963">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620456411963" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1620456411963">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1620626414708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620456411963" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/IPC2_Proyecto3_201905711$main.coverage" NAME="main Coverage Results" MODIFIED="1620454402598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IPC2_Proyecto3_201905711$main.coverage" NAME="main Coverage Results" MODIFIED="1620617536103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
