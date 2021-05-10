@@ -14,14 +14,9 @@ def inicio(request):
     if request.method == 'POST':
         archivo_subido= request.FILES['Cargar_archivo']
         nom=archivo_subido.name
-        for linea in archivo_subido:
-            if cont==0:
-                l=str(linea[:len(linea)-2])
-                cont=cont+1
-            else:
-                l = str(linea[1:])
-                l = str(l[:len(linea) - 1])
-            enxml=str(enxml)+str(l)+"\n"
+        xmlinicio = open(nom, "r")
+        for linea in xmlinicio:
+            enxml=str(enxml)+str(linea)
         context['todoxml'] = enxml
 
         #------------- PARA ENVIAR EL XML DESDE FRONT A BACK-----------------
@@ -32,14 +27,39 @@ def inicio(request):
         r = requests.get('http://127.0.0.1:5000/exml',data=lectura_xml)
         n = requests.get('http://127.0.0.1:5000/nxml', data=nom)
 
-        # string_xml = r.content
-        # tree = ET.fromstring(string_xml)
-        # a = str(ET.dump(tree))
-
-        # dict_data = xmltodict.parse(r.content)
-        # tree = ET.fromstring(r.content)
 
     return render(request,'index.html',context)
+
+
+
+def obtenerXML(request):
+    global nom
+    enxml = ""
+    enxmli = ""
+    l = ""
+    cont = 0
+    context = {}
+    context2 = {}
+    if request.method == 'GET':
+        archivo_xmls=open("estadisticas.xml","w")
+        r = requests.get('http://127.0.0.1:5000/txml')
+        archivo_xmls.write(r.text)
+        archivo_xmls.close()
+
+        xmlfinal = open("estadisticas.xml","r")
+
+        for linea in xmlfinal:
+            enxml = str(enxml) + str(linea)
+        context2['todoxml2'] = enxml
+
+        xmlinicio = open(nom, "r")
+        for line in xmlinicio:
+            enxmli = str(enxmli) + str(line)
+        context['todoxml'] = enxmli
+
+    return render(request, 'index.html', context2)
+
+
 
 
 def ejemplo1(request):
@@ -59,6 +79,3 @@ def ejemplo1(request):
     print(r.text)
 
     return render(request,'index.html')
-
-def obtenerXML(request):
-    pass

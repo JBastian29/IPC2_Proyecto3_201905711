@@ -78,50 +78,52 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 
-    <button class="btn btn-dark" id="boton_consultar" type="submit">Consultar datos</button>
+
     <button class="btn btn-dark" id="boton_gfu" type="submit">Grafica Fecha/Usuario</button>
     <button class="btn btn-dark" id="boton_gfc" type="submit">Grafica Fecha/Codigo</button>
-    <button class="btn btn-dark" id="boton_ayuda" type="submit">Ayuda</button><br><br>
+    <button class="btn btn-dark" id="boton_ayuda" onclick="datosPersonales()">Ayuda</button><br><br>
+
+
+<form action="/obtener/" id="" method="GET" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button class="btn btn-dark" id="boton_consultar" type="submit">Consultar datos</button><br><br>
+        <main class="d-flex justify-content-around">
+        <textarea rows="18" cols="60" style="background-color:rgb(240,243,245), " disabled name="txtcontenidoXML">{{todoxml}}</textarea>
+        {% if todoxml2 %}
+        <textarea rows="18" cols="60" style="background-color:rgb(240, 243, 245)" disabled id="messages">{{todoxml2}}</textarea>
+        {% endif %}
+        </main>
+</form>
+
 <form action="" id="post-form" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
-  <span class="btn btn-success btn-file">
+  <br><center><span class="btn btn-success btn-file">
     Cargar archivo <input type="file" id="Cargar_archivo" name="Cargar_archivo">
-  </span>
-
-
+  </span></center>
 
     <main class="d-flex justify-content-around">
-        {% if todoxml %}
-        <textarea class="" rows="18" cols="60" style="background-color:rgb(240,243,245), " disabled
+        <!-- {% if todoxml %}
+        <textarea rows="18" cols="60" style="background-color:rgb(240,243,245), " disabled
                   id="contenidoXML" name="txtcontenidoXML">{{todoxml}}</textarea>
-        {% endif %}
-        <textarea rows="18" cols="60" style="background-color:rgb(240, 243, 245)" disabled id="messages"></textarea>
+        {% endif %} -->
 
     </main>
-    <br><br><center><button class="btn btn-warning" id="Enviar_Datos" type="submit">Enviar Datos</button>
-    <button type="button" class="btn btn-warning" id="Eliminar">Eliminar</button></center>
+    <br><center><button class="btn btn-warning" id="Enviar_Datos" type="submit">Enviar Datos</button>
+    </center>
+</form>
+
+<form action="/inicio/" id="s" method="">
+    <br><center><button class="btn btn-danger" id="Eliminar" type="submit">Eliminar</button>
+    </center>
 </form>
 
 
 <script>
-    function cargarXML(events) {
-        let archivo = events.target.files[0];
-        if (archivo) {
-            let leer = new FileReader();
-            leer.onload = function (e) {
-                let contenido = e.target.result;
-                document.getElementById('contenidoXML').innerHTML = contenido;
-            };
-            leer.readAsText(archivo);
-        } else {
-            alert('Mi pana dele pa fuera')
-        }
+    function datosPersonales() {
+        alert("Hola! Soy Juan Sebastian Julajuj Zelada - 201905711");
     }
 
-    window.addEventListener('load', () => {
-        document.getElementById('Cargar_archivo').addEventListener('change', cargarXML)
-    });
 
 </script>
 

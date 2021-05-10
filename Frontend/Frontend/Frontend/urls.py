@@ -19,6 +19,7 @@ from Aplicaciones.principal import views
 
 urlpatterns = [
     path('',views.inicio,name='index'),
+    path('inicio/',views.inicio),
     path('ejemplo1/', views.ejemplo1),
     path('obtener/', views.obtenerXML),
     path('admin/', admin.site.urls),
