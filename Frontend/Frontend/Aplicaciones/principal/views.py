@@ -60,9 +60,19 @@ def obtenerXML(request):
     return render(request, 'index.html', context2)
 
 def graficauno(request):
-    n = requests.get('http://127.0.0.1:5000/egraph1')
     context={}
-    context['cantidad'] = n
+    erros=[]
+    if request.method == 'GET':
+        archivo_xmls = open("gra11.txt", "w")
+        r = requests.get('http://127.0.0.1:5000/egraph')
+        archivo_xmls.write(r.text)
+        archivo_xmls.close()
+
+        xmlfinal = open("gra11.txt", "r")
+
+        for linea in xmlfinal:
+            erros.append(int(linea))
+        context['errores']=erros
     return render(request, 'grafica1.html',context)
 
 

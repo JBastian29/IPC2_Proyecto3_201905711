@@ -81,9 +81,7 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 
-<form action="" id="" method="GET" enctype="multipart/form-data">
 <div id="container"></div>
-</form>
 
 <script type="application/javascript">
     Highcharts.chart('container', {
@@ -97,20 +95,7 @@
             text: 'Cantidad de cada codigo'
         },
         xAxis: {
-            categories: [
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-            ],
+            categories: ['Error en fecha','Error en fecha','Error en fecha','Error en fecha','Error en fecha','Error en fecha','Error en fecha'],
             crosshair: true
         },
         yAxis: {
@@ -135,7 +120,7 @@
         },
         series: [{
             colorByPoint:true,
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+            data:{{ errores|safe }}
 
         }]
     });

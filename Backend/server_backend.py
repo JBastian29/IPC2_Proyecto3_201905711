@@ -68,11 +68,14 @@ def modificarXML():
     global fechas
     global cErrores
     global festadistica
+    global na
+    global ne
     linea=[]
     eventos=[]
     event = []
     cErrores=[]
     afec=""
+    canti = []
     eventosM=[] #Eventos modificados
 
     # Expresiones regulares
@@ -191,6 +194,8 @@ def modificarXML():
                 for ay in range(len(festadistica[k].error)):
                     if errores[ax] == festadistica[k].error[ay]:
                         cont = cont + 1
+                canti.append(str(cont))
+                cErrores.append(errores[ax])
                 f.write('\t\t\t\t<CODIGO>' + errores[ax] + '</CODIGO>\n')
                 f.write('\t\t\t\t<CANTIDAD_MENSAJES>' + str(cont) + '</CANTIDAD_MENSAJES>\n')
                 cont=0
@@ -202,8 +207,15 @@ def modificarXML():
         f.write('</ESTADISTICAS>\n')
         f=open('estadisticas.xml','r')
 
-        for km in range(len(festadistica)):
-            cErrores.append(sorted(list(set(festadistica[km].error))))
+        na = open("gra1.txt", 'w')
+        for a in cErrores:
+            na.write(str(a) + "\n")
+
+        ne = open("gra11.txt", 'w')
+        for a in canti:
+            ne.write(str(a) + "\n")
+
+
 
     return Response(response=f.readlines(),mimetype='text/plain',content_type='text/plain')
 
@@ -212,19 +224,16 @@ def graficauno():
     global fechas
     global cErrores
     global festadistica
+    global na
+    global ne
     festadistica=[]
     cErrores=[]
     canti=[]
     cont=0
-    for k in range(len(festadistica)):
-        errores = sorted(list(set(festadistica[k].error)))
-        for ax in range(len(errores)):
-            for ay in range(len(festadistica[k].error)):
-                if errores[ax] == festadistica[k].error[ay]:
-                    cont = cont + 1
-            canti.append(str(cont))
-            cErrores.append(errores[ax])
-    return f'{canti}'
+    na = open('gra1.txt', 'r')
+    ne = open('gra11.txt', 'r')
+    return Response(response=na.readlines(),mimetype='text/plain',content_type='text/plain')
+    return Response(response=ne.readlines(),mimetype='text/plain',content_type='text/plain')
 
 if __name__ == '__main__':
     app.run(debug=True)
