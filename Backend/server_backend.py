@@ -65,9 +65,13 @@ def nombre_xml():
 @app.route("/txml", methods=['GET'])
 def modificarXML():
     global nom
+    global fechas
+    global cErrores
+    global festadistica
     linea=[]
     eventos=[]
     event = []
+    cErrores=[]
     afec=""
     eventosM=[] #Eventos modificados
 
@@ -86,7 +90,6 @@ def modificarXML():
                 linea = []
             elif l == "<EVENTOS>":
                 linea.pop()
-        print(eventos)
 
 
         for x in range(len(eventos)):
@@ -110,7 +113,6 @@ def modificarXML():
                         event.append(correo.group(0))
                     if error:
                         event.append(error.group(0))
-            print(event)
             eventosM.append(event)
             event=[]
 
@@ -124,7 +126,6 @@ def modificarXML():
             fechas.append(final[fe].fecha)
         fechas=sorted(list(set(fechas)))
 
-        print(fechas)
 
         esta=[]
         testa=[]
@@ -152,8 +153,6 @@ def modificarXML():
             cerror=""
             testa.append(esta)
             esta=[]
-
-        print(testa)
 
         festadistica = []
         for a in range(len(testa)):
@@ -202,8 +201,30 @@ def modificarXML():
             f.write('\t</ESTADISTICA>\n')
         f.write('</ESTADISTICAS>\n')
         f=open('estadisticas.xml','r')
+
+        for km in range(len(festadistica)):
+            cErrores.append(sorted(list(set(festadistica[km].error))))
+
     return Response(response=f.readlines(),mimetype='text/plain',content_type='text/plain')
 
+@app.route("/egraph", methods=['GET'])
+def graficauno():
+    global fechas
+    global cErrores
+    global festadistica
+    festadistica=[]
+    cErrores=[]
+    canti=[]
+    cont=0
+    for k in range(len(festadistica)):
+        errores = sorted(list(set(festadistica[k].error)))
+        for ax in range(len(errores)):
+            for ay in range(len(festadistica[k].error)):
+                if errores[ax] == festadistica[k].error[ay]:
+                    cont = cont + 1
+            canti.append(str(cont))
+            cErrores.append(errores[ax])
+    return f'{canti}'
 
 if __name__ == '__main__':
     app.run(debug=True)

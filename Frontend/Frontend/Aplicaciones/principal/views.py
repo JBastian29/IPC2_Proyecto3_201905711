@@ -59,7 +59,11 @@ def obtenerXML(request):
 
     return render(request, 'index.html', context2)
 
-
+def graficauno(request):
+    n = requests.get('http://127.0.0.1:5000/egraph1')
+    context={}
+    context['cantidad'] = n
+    return render(request, 'grafica1.html',context)
 
 
 def ejemplo1(request):

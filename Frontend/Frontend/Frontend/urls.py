@@ -22,5 +22,6 @@ urlpatterns = [
     path('inicio/',views.inicio),
     path('ejemplo1/', views.ejemplo1),
     path('obtener/', views.obtenerXML),
+    path('grafica1/', views.graficauno),
     path('admin/', admin.site.urls),
 ]
