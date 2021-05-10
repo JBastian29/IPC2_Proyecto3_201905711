@@ -232,7 +232,7 @@ def graficauno():
     cont=0
     na = open('gra1.txt', 'r')
     ne = open('gra11.txt', 'r')
-    return Response(response=na.readlines(),mimetype='text/plain',content_type='text/plain')
+    #return Response(response=na.readlines(),mimetype='text/plain',content_type='text/plain')
     return Response(response=ne.readlines(),mimetype='text/plain',content_type='text/plain')
 
 if __name__ == '__main__':
