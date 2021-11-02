@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ea660db-55a8-4f99-acba-752355c861c9" name="Default Changelist" comment="" />
+    <list default="true" id="2ea660db-55a8-4f99-acba-752355c861c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Desdefrontend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Desdefrontend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/estadisticas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/estadisticas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/gra1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/gra1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/gra11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/gra11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/server_backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server_backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend/Templates/grafica1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend/Templates/grafica1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend/estadisticas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend/estadisticas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend/gra11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend/gra11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend/prueba.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="98ad1a4c-01c9-4e51-b385-9965c994a0be" />
   <component name="ProjectId" id="1s9XKggDTnxace8esiostdoEHNQ" />
   <component name="ProjectViewState">
@@ -25,7 +39,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Quinto - Cuarto Semestre/Lap IPC2/Algunas pruebas/Pruebaxml3erP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EDD_SmartClassF2/EDD_SmartClassF2_201905711/Backend" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -60,49 +74,31 @@
       <option name="presentableId" value="Default" />
       <updated>1620285718453</updated>
       <workItem from="1620285720541" duration="64353000" />
+      <workItem from="1620700743518" duration="9000" />
+      <workItem from="1620788872650" duration="1725000" />
+      <workItem from="1620790645939" duration="1441000" />
+      <workItem from="1620846765358" duration="1152000" />
+      <workItem from="1621520427872" duration="44000" />
+      <workItem from="1623172720640" duration="38000" />
+      <workItem from="1629420436329" duration="49000" />
+      <workItem from="1629469395312" duration="18000" />
+      <workItem from="1632114533516" duration="63000" />
+      <workItem from="1632115491735" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620618083055">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620618083055" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1620626414708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620626414708" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Backend/server_backend.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IPC2_Proyecto3_201905711$main.coverage" NAME="main Coverage Results" MODIFIED="1620617536103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -77,6 +77,8 @@ def modificarXML():
     afec=""
     canti = []
     eventosM=[] #Eventos modificados
+    con = 0
+    banderita = True
 
     # Expresiones regulares
     expfecha = re.compile(r'^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$')
@@ -86,13 +88,22 @@ def modificarXML():
     with open("Desdefrontend.xml", 'r') as archivo:
         lineas = archivo.read().splitlines()
         for l in lineas:  # Con este for leo el archivo
-            n = l.replace("\t", "").replace("Guatemala,","")
-            linea.append(n)
-            if l == "\t</EVENTO>":
+            if (con == 2 and banderita == False) or (con == 1 and banderita == True):
+                n = l.split(",")[1].strip()
+                linea.append(n.strip())
+                con = con + 1
+            else:
+                n = l.replace("\t", "")
+                linea.append(n.strip())
+                con = con + 1
+            if l.strip() == "\t</EVENTO>" or l.strip() == "</EVENTO>":
                 eventos.append(linea)
                 linea = []
-            elif l == "<EVENTOS>":
+                con = 0
+                banderita = True
+            elif l.strip() == "<EVENTOS>":
                 linea.pop()
+                banderita = False
 
 
         for x in range(len(eventos)):
